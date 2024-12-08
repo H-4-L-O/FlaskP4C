@@ -1,0 +1,117 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif; /* 기본 글꼴 설정 */
+    background-color: #f9f9f9; /* 배경 색상: 연한 회색 */
+    color: #333; /* 기본 글자 색상 */
+    margin: 20px; /* 페이지 여백 */
+}
+
+/* 페이지 제목 스타일 */
+h1 {
+    color: black; /* 제목 글자 색상 */
+    font-size: 24px; /* 제목 글자 크기 */
+    margin-bottom: 20px; /* 제목 아래 여백 */
+    text-align: center; /* 제목 중앙 정렬 */
+    text-transform: uppercase; /* 제목 대문자로 변환 */
+}
+
+/* 버튼 공통 스타일 */
+button {
+    background-color: blue; /* 버튼 배경색 */
+    color: white; /* 버튼 글자 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 버튼 모서리를 둥글게 */
+    padding: 10px 15px; /* 버튼 내부 여백 */
+    cursor: pointer; /* 마우스를 올리면 포인터 커서 표시 */
+    font-size: 14px; /* 버튼 글자 크기 */
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+button:hover {
+    background-color: #0056b3; /* 버튼 배경색 변경 */
+    transform: scale(1.05); /* 버튼 약간 확대 */
+}
+
+/* 삭제 버튼 스타일 */
+.delete-button {
+    background-color: red; /* 삭제 버튼 배경색 */
+}
+
+/* 삭제 버튼에 마우스를 올렸을 때 */
+.delete-button:hover {
+    background-color: #B90000; /* 삭제 버튼 호버 색상 */
+}
+
+/* 버튼 간의 간격 설정 */
+.action-button {
+    margin-right: 5px; /* 버튼 간 오른쪽 간격 */
+    margin-bottom: 10px; /* 버튼과 아래 요소 간의 간격 */
+}
+
+/* 게시글 목록 스타일 */
+ul {
+    list-style-type: none; /* 목록 번호 제거 */
+    padding: 0; /* 목록의 기본 여백 제거 */
+}
+
+/* 각 게시글 항목 스타일 */
+li {
+    margin-bottom: 15px; /* 게시글 간의 여백 */
+    padding: 10px; /* 게시글 항목 내부 여백 */
+    border: 1px solid #ddd; /* 항목 테두리 */
+    border-radius: 4px; /* 항목 테두리 둥글게 */
+    background-color: white; /* 항목 배경 색상 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 항목 그림자 효과 */
+}
+
+/* 입력 필드와 텍스트 영역 스타일 */
+input[type="text"], textarea {
+    width: 100%; /* 입력 필드의 너비를 100%로 설정 */
+    padding: 8px; /* 입력 필드 내부 여백 */
+    margin-bottom: 15px; /* 필드와 아래 요소 간의 간격 */
+    border: 1px solid #ccc; /* 필드 테두리 색상 */
+    border-radius: 4px; /* 필드 모서리를 둥글게 */
+    box-sizing: border-box; /* 여백을 포함한 크기 설정 */
+    transition: border-color 0.3s ease; /* 테두리 색상 전환 효과 */
+}
+
+/* 입력 필드에 포커스가 되었을 때 */
+input[type="text"]:focus, textarea:focus {
+    border-color: blue; /* 포커스 시 테두리 색상 변경 */
+    outline: none; /* 기본 outline 제거 */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* 포커스 시 외곽선 효과 */
+}
+
+/* 입력 필드 레이블 스타일 */
+label {
+    font-weight: bold; /* 레이블 글자 두껍게 */
+    display: block; /* 레이블을 블록 요소로 설정 */
+    margin-bottom: 10px; /* 레이블과 필드 간의 간격 */
+    color: #333; /* 레이블 색상 */
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-button {
+    background-color: gray; /* 뒤로가기 버튼 배경색 */
+    color: white; /* 뒤로가기 버튼 글자 색상 */
+    margin-top: 15px; /* 버튼 위 간격 */
+}
+
+.back-button:hover {
+    background-color: #555; /* 뒤로가기 버튼 호버 색상 */
+}
+
+/* 중앙 정렬 컨테이너 */
+.container {
+    max-width: 600px; /* 컨테이너 최대 너비 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+    background-color: white; /* 배경 색상 */
+    border-radius: 8px; /* 모서리 둥글게 */
+}
+
+/* 텍스트 정렬 */
+.text-center {
+    text-align: center; /* 중앙 정렬 */
+}

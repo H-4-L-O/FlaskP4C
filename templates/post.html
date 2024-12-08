@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 문서의 인코딩을 UTF-8로 설정 (한글 및 특수 문자 지원) -->
+    <meta charset="UTF-8">
+    <!-- 브라우저 화면의 너비와 화면 크기를 디바이스의 너비에 맞게 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 페이지 제목: '게시글 수정' 또는 '게시글 작성'으로 동적으로 표시 -->
+    <title>{{ '게시글 수정' if post else '게시글 작성' }}</title>
+    <!-- CSS 스타일시트 연결 -->
+    <!-- Flask의 `url_for` 함수를 사용하여 static 디렉토리의 style.css 파일을 불러옴 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- 콘텐츠를 정렬 및 레이아웃을 잡는 컨테이너 -->
+    <div class="container">
+        <!-- 페이지 제목 -->
+        <!-- 게시글 수정인지 작성인지에 따라 제목을 동적으로 변경 -->
+        <h1 class="text-center">{{ '게시글 수정' if post else '게시글 작성' }}</h1>
+
+        <!-- 게시글 작성/수정 폼 -->
+        <!-- POST 메소드를 사용하여 서버에 데이터를 전송 -->
+        <form method="POST">
+            <!-- 제목 입력 필드 -->
+            <!-- 사용자가 게시글 제목을 입력할 수 있는 입력창 -->
+            <!-- 기존 게시글 수정 시에는 기존 제목을 표시 -->
+            <label>제목:</label>
+            <input type="text" name="title" value="{{ post.title if post else '' }}" required>
+
+            <!-- 내용 입력 필드 -->
+            <!-- 사용자가 게시글 내용을 입력할 수 있는 입력창 -->
+            <!-- 기존 게시글 수정 시에는 기존 내용을 표시 -->
+            <label>내용:</label>
+            <textarea name="content" required>{{ post.content if post else '' }}</textarea>
+
+            <!-- 작성/수정 버튼 -->
+            <!-- 버튼의 텍스트는 작성인지 수정인지에 따라 동적으로 변경 -->
+            <button type="submit" class="action-button">{{ '수정' if post else '작성' }}</button>
+        </form>
+
+        <!-- 뒤로가기 버튼 -->
+        <!-- 메인 페이지('/')로 이동 -->
+        <!-- `type="button"`은 서버에 데이터를 전송하지 않고 동작하도록 설정 -->
+        <a href="/"><button class="back-button">뒤로가기</button></a>
+    </div>
+</body>
+</html>

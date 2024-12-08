@@ -4,13 +4,13 @@
     <!-- HTML 문서의 문자 인코딩을 UTF-8로 설정 -->
     <meta charset="UTF-8">
     
-    <!-- 브라우저 화면 크기를 디바이스의 너비에 맞게 조정하고, 초기 확대 비율을 1로 설정합니다. -->
+    <!-- 브라우저 화면 크기를 디바이스의 너비에 맞게 조정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>게시판</title>
     
     <!-- 외부 CSS 파일(style.css)을 연결하여 페이지 디자인과 레이아웃을 적용합니다. -->
-    <!-- `url_for` 함수를 사용하여 static 디렉토리에 있는 style.css 파일을 불러옵니다. -->
+    <!-- `url_for` 함수를 사용하여 static 디렉토리에 있는 style.css 파일 연동 -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -18,7 +18,7 @@
     
     <!-- 글쓰기 버튼 -->
     <!-- 사용자가 게시글을 작성할 수 있는 글쓰기 페이지로 이동 -->
-    <!-- 버튼은 CSS로 스타일링되며, HTML에서 <a> 태그로 URL 이동을 처리합니다. -->
+    <!-- 버튼은 CSS로 스타일링되며, HTML에서 <a> 태그로 URL 이동을 처리 -->
     <a href="/write">
         <button class="action-button">글쓰기</button>
     </a>
@@ -46,7 +46,7 @@
             <!-- 삭제 버튼 -->
             <!-- 사용자가 삭제 버튼을 클릭하면 삭제 확인창이 표시됨 -->
             <!-- 확인을 누르면 해당 게시글 삭제 요청이 서버로 전송 -->
-            <a href="/delete/{{ post.id }}" onclick="return confirm('정말 삭제하시겠습니까?');">
+            <a href="/delete/{{ post.id }}" onclick="return confirm('삭제하시겠습니까?');">
                 <button class="delete-button">삭제</button>
             </a>
         </li>
